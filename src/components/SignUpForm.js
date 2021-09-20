@@ -1,18 +1,22 @@
 import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { useState } from 'react';
-import schema from '../Schemas/logInFormSchema';
+import schema from '../Schemas/SignUpFormSchema';
 import * as yup from 'yup';
 
 const initialFormData = {
+    name: '',
     email: '',
     password: '',
+    confirmPw: '',
 };
 const initialFormErrors = {
+    name: 'A name is required',
     email: 'An email is required',
     password: 'A password is required',
+    confirmPw: '',
 };
 
-function LogInForm(props){
+function SignUpForm(props){
     const [ formData, setFormData ] = useState(initialFormData);
     const [ formErrors, setFormErrors ] = useState(initialFormErrors);
 
@@ -39,10 +43,16 @@ function LogInForm(props){
     return (
         <Form onSubmit={onSubmit}>
             <FormGroup>
+                <Label>Name: <Input type='text' name='name' value={formData.name} onChange={onChange}/></Label>
+            </FormGroup>
+            <FormGroup>
                 <Label>Email: <Input type='email' name='email' value={formData.email} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
                 <Label>Password: <Input type='password' name='password' value={formData.password} onChange={onChange}/></Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>Confirm Password: <Input type='password' name='confirmPw' value={formData.confirmPw} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
                 <Input type='submit'/>
@@ -51,4 +61,4 @@ function LogInForm(props){
     );
 };
 
-export default LogInForm;
+export default SignUpForm;
