@@ -1,6 +1,6 @@
 // Libraries
 import { Route, Switch, NavLink } from "react-router-dom";
-import { Navbar, NavbarBrand } from "reactstrap";
+import { Navbar, NavItem } from "reactstrap";
 // Styles
 import "./App.scss";
 // Self-Made Components
@@ -13,8 +13,12 @@ function App() {
       {/* Display HeaderBar on all pages */}
       <Navbar color="light">
         <h2>Potluck Planner</h2>
-        <NavLink to="/">HomePage</NavLink>
-        <NavLink to="/form">FormPage</NavLink>
+        <NavItem>
+          <NavLink to="/">HomePage</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/form">FormPage</NavLink>
+        </NavItem>
       </Navbar>
 
       {/* Show page scene under header depending on Route */}
