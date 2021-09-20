@@ -16,7 +16,7 @@ function App() {
 
       {/* Show page scene under header depending on Route */}
       <Switch>
-        <Route path={`/form`}>
+        <Route path={`/login`}>
           <LogInPage />
         </Route>
         <Route exact path={`/`}>
