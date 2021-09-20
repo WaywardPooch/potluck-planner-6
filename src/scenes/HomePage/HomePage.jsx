@@ -1,12 +1,12 @@
 import React from "react";
-import { Jumbotron } from "reactstrap";
+import HeroBanner from "../../components/HeroBanner/HeroBanner.jsx"
+
+import heroHomeImg from "../../assets/hero-home-400kb.jpg"
 
 const HomePage = () => {
   return (
     <>
-      <Jumbotron>
-        <h2>Potluck Planner Home Page</h2>
-      </Jumbotron>
+      <HeroBanner title="Potluck Planner" description="The Ultimate Potluck Organizer" imageURL={heroHomeImg}/>
     </>
   );
 }
