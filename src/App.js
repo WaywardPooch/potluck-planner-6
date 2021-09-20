@@ -3,9 +3,10 @@ import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
 // Custom components
+import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
-import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
+
+      {/* Display Footer on all pages */}
+      <Footer />
     </div>
   );
 }

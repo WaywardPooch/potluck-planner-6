@@ -1,0 +1,24 @@
+$color-footer-bg: #2f2f2f;
+$color-footer-text: #eee;
+$max-width-desktop: 1000px;
+
+footer {
+  background-color: $color-footer-bg;
+  padding: 8rem 0;
+
+  div.footer-content {
+    margin: auto;
+    max-width: $max-width-desktop;
+    text-align: center;
+
+    h2 {
+      border: solid 1px $color-footer-text;
+      border-radius: 7px;
+      color: $color-footer-text;
+      display: inline-block;
+      letter-spacing: 0.2rem;
+      padding: 2rem 4rem;
+      text-transform: uppercase;
+    }
+  }
+}
