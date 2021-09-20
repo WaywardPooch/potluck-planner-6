@@ -1,12 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { Jumbotron } from "reactstrap";
 
 const HomePage = () => {
   return (
     <>
       <Jumbotron>
-        <h1>Potluck Planner</h1>
+        <h2>Potluck Planner Home Page</h2>
       </Jumbotron>
     </>
   );
