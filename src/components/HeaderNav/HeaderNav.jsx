@@ -14,7 +14,7 @@ const HeaderNav = (props) => {
         </div>
         <nav className="header-right">
           <NavLink exact to="/" activeClassName="active-navlink">Home</NavLink>
-          <NavLink to="/form" activeClassName="active-navlink">Form</NavLink>
+          <NavLink to="/form" activeClassName="active-navlink">Log In</NavLink>
         </nav>
       </div>
     </header>

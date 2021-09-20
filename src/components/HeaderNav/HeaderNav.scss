@@ -10,7 +10,10 @@ $color-link-hover-bg: $color-link;
 
 header.header-navbar {
   background-color: $color-background;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   padding: 2rem 0;
+  position: sticky;
+  top: 0;
 
   div.header-content {
     align-items: center;
