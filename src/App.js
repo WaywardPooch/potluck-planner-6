@@ -2,9 +2,9 @@
 import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
-// Self-Made Components
+// Custom components
 import HomePage from "./scenes/HomePage/HomePage.jsx";
-import LogInForm from "./components/LogInForm.js";
+import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
 import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       {/* Show page scene under header depending on Route */}
       <Switch>
         <Route path={`/form`}>
-          <LogInForm />
+          <LogInPage />
         </Route>
         <Route exact path={`/`}>
           <HomePage />
