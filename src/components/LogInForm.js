@@ -1,26 +1,39 @@
 import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { useState, useEffect } from 'react';
+import schema from '../Schemas/logInFormSchema';
+import * as yup from 'yup';
 
 const initialFormData = {
     email: '',
     password: '',
 };
 const initialFormErrors = {
-    email: '',
-    password: '',
+    email: 'An email is required',
+    password: 'A password is required',
 };
 
 function LogInForm(props){
-    const [ formData, setFormData] = useState(initialFormData);
-    const [ formErrors, setFormErrors] = useState(initialFormErrors);
+    const [ formData, setFormData ] = useState(initialFormData);
+    const [ formErrors, setFormErrors ] = useState(initialFormErrors);
 
     const onSubmit = event => {
         event.preventDefault();
-        setFormData(initialFormData)
+        let success = false;
+        schema.isValid(formData).then(valid => success=valid);
+        if(success){
+            // axios
+            setFormData(initialFormData);
+        } else {
+            console.error(formErrors);
+        }
     };
     const onChange = event => {
         const { name, value } = event.target;
         setFormData({...formData, [name]:value});
+        yup.reach(schema, name)
+            .validate(value)
+            .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+            .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }));
     };
 
     return (
