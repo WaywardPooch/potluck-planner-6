@@ -13,7 +13,7 @@ const HeaderNav = (props) => {
           <h2>{title}</h2>
         </div>
         <nav className="header-right">
-          <NavLink to="/" activeClassName="active-navlink">Home</NavLink>
+          <NavLink exact to="/" activeClassName="active-navlink">Home</NavLink>
           <NavLink to="/form" activeClassName="active-navlink">Form</NavLink>
         </nav>
       </div>
