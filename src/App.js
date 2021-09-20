@@ -1,12 +1,30 @@
-import './App.scss';
-import { Route, Link } from 'react-router-dom';
-import LogInForm from './components/LogInForm';
+// Libraries
+import { Route, NavLink, Switch } from "react-router-dom";
+import { Navbar } from "reactstrap";
+// Styles
+import "./App.scss";
+// Self-Made Components
+import HomePage from "./scenes/HomePage/HomePage.jsx";
+import LogInForm from "./components/LogInForm.js";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <h1>Potluck Planner 6</h1>
-      <Route exact path='/'><LogInForm></LogInForm></Route>
+      {/* Display HeaderBar on all pages */}
+      <Navbar color="black">
+        <NavLink to={`/form`}>FormPage</NavLink>
+        <NavLink to={`/`}>HomePage</NavLink>
+      </Navbar>
+
+      {/* Show page scene under header depending on Route */}
+      <Switch>
+        <Route path={`/form`}>
+          <LogInForm />
+        </Route>
+        <Route exact path={`/`}>
+          <HomePage />
+        </Route>
+      </Switch>
     </div>
   );
 }
