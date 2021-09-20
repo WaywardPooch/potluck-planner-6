@@ -1,7 +1,15 @@
 $max-width-desktop: 1000px;
 
+$color-background: #2f2f2f;
+$color-title: #eee;
+$color-link: #eee;
+$color-link-active: coral;
+
+$color-link-hover-fg: $color-background;
+$color-link-hover-bg: $color-link;
+
 header.header-navbar {
-  background-color: #2f2f2f;
+  background-color: $color-background;
   padding: 2rem 0;
 
   div.header-content {
@@ -13,7 +21,7 @@ header.header-navbar {
 
     div.header-left {
       h2 {
-        color: #eee;
+        color: $color-title;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
@@ -22,7 +30,7 @@ header.header-navbar {
     nav.header-right {
       a {
         border-radius: 7px;
-        color: #eee;
+        color: $color-link;
         font-size: 1.8rem;
         margin-left: 1rem;
         padding: 1rem;
@@ -30,12 +38,12 @@ header.header-navbar {
         transition: 200ms;
 
         &.active-navlink {
-          color: coral;
+          color: $color-link-active;
         }
 
         &:hover {
-          background-color: #eee;
-          color: #2f2f2f;
+          background-color: $color-link-hover-bg;
+          color: $color-link-hover-fg;
         }
       }
     }
