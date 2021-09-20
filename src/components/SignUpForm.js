@@ -13,7 +13,7 @@ const initialFormErrors = {
     name: 'A name is required',
     email: 'An email is required',
     password: 'A password is required',
-    confirmPw: '',
+    confirmPw: 'You must confirm your password',
 };
 
 function SignUpForm(props){
