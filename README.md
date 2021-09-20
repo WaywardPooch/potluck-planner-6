@@ -1,6 +1,9 @@
 ## Product Vision Document
 Link: https://docs.google.com/document/d/1i-e6bikzUS9N6SuDjmasI383lG4OODep_4Q3CMILiAc/edit?usp=sharing
 
+## Trello Planning Board
+Link: https://trello.com/b/HrGEfxFo/potluck-planner-6
+
 ## ☝️ **Pitch**
 
 If you have ever tried to organize a potluck through text messages, online to-do lists or spreadsheets, you'll understand why this app is essential. 
