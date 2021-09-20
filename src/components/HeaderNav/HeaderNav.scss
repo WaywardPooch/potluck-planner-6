@@ -1,0 +1,43 @@
+$max-width-desktop: 1000px;
+
+header.header-navbar {
+  background-color: #2f2f2f;
+  padding: 2rem 0;
+
+  div.header-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $max-width-desktop;
+
+    div.header-left {
+      h2 {
+        color: #eee;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+      }
+    }
+    nav.header-right {
+      a {
+        border-radius: 7px;
+        color: #eee;
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+        transition: 200ms;
+
+        &.active-navlink {
+          color: coral;
+        }
+
+        &:hover {
+          background-color: #eee;
+          color: #2f2f2f;
+        }
+      }
+    }
+  }
+}

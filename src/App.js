@@ -1,25 +1,17 @@
 // Libraries
-import { Route, Switch, NavLink } from "react-router-dom";
-import { Navbar, NavItem } from "reactstrap";
+import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
 // Self-Made Components
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LogInForm from "./components/LogInForm.js";
+import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 
 function App() {
   return (
     <div className="App">
       {/* Display HeaderBar on all pages */}
-      <Navbar color="light">
-        <h2>Potluck Planner</h2>
-        <NavItem>
-          <NavLink to="/">HomePage</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/form">FormPage</NavLink>
-        </NavItem>
-      </Navbar>
+      <HeaderNav title="Potluck Planner" />
 
       {/* Show page scene under header depending on Route */}
       <Switch>
