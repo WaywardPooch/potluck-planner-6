@@ -46,6 +46,20 @@ header.header-navbar {
       }
     }
     nav.header-right {
+      button.dev-button {
+        background: none;
+        border: 1px solid $color-link;
+        border-radius: 7px;
+        color: $color-link;
+        font-size: 1.8rem;
+        padding: 1rem;
+        transition: 200ms;
+
+        &:hover {
+          background-color: $color-link-hover-bg;
+          color: $color-link-hover-fg;
+        }
+      }
       a {
         font-size: 1.8rem;
         margin-left: 1rem;

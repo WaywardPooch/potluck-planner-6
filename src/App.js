@@ -1,4 +1,5 @@
 // Libraries
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
@@ -10,13 +11,13 @@ import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   // This is a PLACEHOLDER variable for testing login/logout states
-  // Please hook this up to the logged in state when ready!
-  const isLoggedIn = false;
+  // Please hook this up to the real logged in state when ready!
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="App">
       {/* Display HeaderBar on all pages */}
-      <HeaderNav isLoggedIn={isLoggedIn} />
+      <HeaderNav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
       {/* Show page scene under header depending on Route */}
       <Switch>
