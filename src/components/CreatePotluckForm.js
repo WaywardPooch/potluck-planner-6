@@ -59,7 +59,7 @@ function CreatePotluckForm(props){
             </FormGroup>
             <FormGroup>
                 <Label>Request an item: <Input type='text' name='itemRequested' value={formData.itemRequested} onChange={onChange}/></Label><Button onClick={addRequestedItem}>Add Item</Button><br/>
-                {formData.itemsRequested.map((item, index) => <><p>{item}</p><Button onClick={removeItem(index)}>Remove Item</Button></>)}
+                {formData.itemsRequested.map((item, index) => <><p>{item}</p><Button onClick={removeItem(index)}>Remove Item</Button>   </>)}
             </FormGroup>
             <FormGroup>
                 <Label>Date: <Input type='date' name='date' value={formData.date} onChange={onChange}/></Label>
@@ -68,7 +68,7 @@ function CreatePotluckForm(props){
                 <Label>Time: <Input type='text' name='time' value={formData.time} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
-                <Label>Address: <Input type='text' name='address' value={formData.time} onChange={onChange}/></Label>
+                <Label>Address: <Input type='text' name='address' value={formData.address} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
                 <Input type='submit'/>
