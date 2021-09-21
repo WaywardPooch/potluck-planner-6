@@ -111,13 +111,12 @@ function LogInForm(props){
                         setLoggedIn(true); //TEMP CODE, PLEASE DELETE
                         break; //TEMP CODE, PLEASE DELETE
                     } //TEMP CODE, PLEASE DELETE
+                    if(i===usersDummyData.length-1){ //TEMP CODE, PLEASE DELETE
+                        console.error('Incorrect email or password submitted'); //TEMP CODE, PLEASE DELETE
+                    } //TEMP CODE, PLEASE DELETE
                 } //TEMP CODE, PLEASE DELETE
-                if(loggedIn){ //TEMP CODE, PLEASE DELETE
-                    setFormData(initialFormData);
-                    setFormErrors(initialFormErrors);
-                } else { //TEMP CODE, PLEASE DELETE
-                    console.error('Incorrect email or password submitted'); //TEMP CODE, PLEASE DELETE
-                } //TEMP CODE, PLEASE DELETE
+                setFormData(initialFormData);
+                setFormErrors(initialFormErrors);
             } else {
                 console.error(formErrors);
             }
