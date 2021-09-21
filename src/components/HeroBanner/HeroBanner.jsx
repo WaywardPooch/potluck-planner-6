@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "./HeroBanner.scss";
 
 const HeroBanner = (props) => {
-  const { 
+  const {
+    height,
     title, 
     description, 
     imageURL, 
@@ -17,6 +18,7 @@ const HeroBanner = (props) => {
       className="hero"
       style={{
         backgroundImage: `url(${imageURL})`,
+        height: `${height}rem`
       }}
     >
       <div className="hero-content">

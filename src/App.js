@@ -7,7 +7,7 @@ import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import CreatePotluckPage from "./scenes/CreatePotluckPage/CreatePotluckPage";
+import CreatePage from "./scenes/CreatePage/CreatePage";
 
 function App() {
   return (
@@ -18,12 +18,12 @@ function App() {
       {/* Show page scene under header depending on Route */}
       <Switch>
         <Route path={`/potlucks/create`}>
-          <CreatePotluckPage />
+          <CreatePage />
         </Route>
         <Route path={`/account`}>
           <LogInPage />
         </Route>
-        <Route exact path={`/`}>
+        <Route path={`/`}>
           <HomePage />
         </Route>
       </Switch>
