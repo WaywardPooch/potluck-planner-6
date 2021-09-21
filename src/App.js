@@ -7,24 +7,24 @@ import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import CreatePage from "./scenes/CreatePage/CreatePage.jsx";
 
 function App() {
+  // This is a PLACEHOLDER variable for testing login/logout states
+  // Please hook this up to the logged in state when ready!
+  const isLoggedIn = false;
+
   return (
     <div className="App">
       {/* Display HeaderBar on all pages */}
-      <HeaderNav title="Potluck Planner" />
+      <HeaderNav isLoggedIn={isLoggedIn} />
 
       {/* Show page scene under header depending on Route */}
       <Switch>
-        <Route path={`/potlucks/create`}>
-          <CreatePage />
-        </Route>
         <Route path={`/account`}>
           <LogInPage />
         </Route>
         <Route path={`/`}>
-          <HomePage isLoggedIn={false}/>
+          <HomePage isLoggedIn={isLoggedIn}/>
         </Route>
       </Switch>
 

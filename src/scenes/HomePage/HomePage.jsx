@@ -5,13 +5,16 @@ import heroHomeImg from "../../assets/img-hero-home-400kb.jpg";
 // Custom components
 import HeroBanner from "../../components/HeroBanner/HeroBanner.jsx";
 import TextShowcase from "../../components/TextShowcase/TextShowcase.jsx";
+import CreatePotluckSection from "../CreatePotluckSection/CreatePotluckSection.jsx";
 
 const HomePage = (props) => {
   const { isLoggedIn } = props;
 
   return (
     <>
-      {!isLoggedIn && (
+      {!isLoggedIn 
+      // When the user is bot logged in, show marketing stuff
+      ? (
         <section className="home-page">
           <HeroBanner
             height={50}
@@ -32,6 +35,9 @@ const HomePage = (props) => {
             textAlign="center"
           />
         </section>
+      // When the user IS logged in, show real UI
+      ) : (
+        <CreatePotluckSection />
       )}
     </>
   );
