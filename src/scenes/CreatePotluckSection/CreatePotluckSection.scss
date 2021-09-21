@@ -2,8 +2,10 @@ $max-width-desktop: 1000px;
 $width-card-desktop: 300px;
 
 $color-card-bg: white;
+$color-section-bg: #eee;
 
 section.create-potluck-section {
+  background-color: $color-section-bg;
   padding: 4rem;
 
   div.create-potluck-content {
