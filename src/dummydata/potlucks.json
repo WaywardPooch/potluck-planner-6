@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "potluck_name": "Johnny's SuperFeast",
+    "potluck_time": "12:00:00",
+    "potluck_date": "09/20/21",
+    "potluck_location": "Planet Awesome"
+  },
+  {
+    "potluck_name": "Fred's Nightly Surprise",
+    "potluck_time": "02:00:00",
+    "potluck_date": "09/13/21",
+    "potluck_location": "Elm Street"
+  },
+  {
+    "potluck_name": "Goff's Goodbye Party",
+    "potluck_time": "2:00:00",
+    "potluck_date": "08/25/21",
+    "potluck_location": "SoFi Stadium"
+  },
+  {
+    "potluck_name": "Hobo Dine-Out",
+    "potluck_time": "08:00:00",
+    "potluck_date": "08/20/21",
+    "potluck_location": "Town Square"
+  }
+]

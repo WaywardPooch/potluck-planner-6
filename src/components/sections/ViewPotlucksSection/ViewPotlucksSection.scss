@@ -1,0 +1,21 @@
+section.view-potlucks {
+  background-color: #eee;
+  padding: 4rem 0;
+
+  div.view-potlucks-content {
+    margin: 0 auto;
+    max-width: 1000px;
+
+    h2 {
+      font-size: 3.6rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    div.potluck-gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+}
