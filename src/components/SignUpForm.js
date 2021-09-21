@@ -3,6 +3,8 @@ import { useState } from 'react';
 import schema from '../Schemas/SignUpFormSchema';
 import * as yup from 'yup';
 
+import usersDummyData from '../dummydata/users.json'; //TEMP CODE, PLEASE DELETE
+
 const initialFormData = {
     name: '',
     email: '',
@@ -24,7 +26,7 @@ function SignUpForm(props){
         event.preventDefault();
         schema.isValid(formData).then(valid => {
             if(valid){
-                // axios
+                usersDummyData.push(formData); //TEMP CODE, PLEASE DELETE
                 setFormData(initialFormData);
             } else {
                 console.error(formErrors);
