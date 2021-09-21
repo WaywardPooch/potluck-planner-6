@@ -2,8 +2,6 @@
 import React from "react";
 // Styles
 import "./CreatePage.scss";
-// import CreateForm from "../../components/CreateForm";
-import HomePageCard from "../../components/Cards/HomePageCard/HomePageCard";
 
 const CreatePage = () => {
   return (

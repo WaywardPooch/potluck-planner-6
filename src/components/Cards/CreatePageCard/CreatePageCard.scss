@@ -13,31 +13,25 @@ div.card-body {
     height: 50vh;
     // height: auto;
 }
-
-
-
-div.card-body2 {
-
-    background-color: darkgray;
-    width: 25%;
-    height: 50vh;
-    // height: auto;
-    
-}
 div.card-body button{
     margin-left: 25%;
     width: 50%;
     height: 5vh;
     color: white;
     background-color: #2f2f2f;
-
 }
-
-div.card-body3 {
-    display: inline-block;
+div.card-body2 {
     background-color: darkgray;
     width: 25%;
     height: 50vh;
     // height: auto;
-    
+}
+div.card-body3 {
+    display: inline-block;
+    background-color: darkgray;
+    border: 5px solid black;
+    border-radius: 50%;
+    width: 25%;
+    height: 50vh;
+    // height: auto;
 }

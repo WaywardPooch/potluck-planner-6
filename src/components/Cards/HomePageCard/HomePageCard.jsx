@@ -19,8 +19,6 @@ const HomePageCard = () => {
           <p>food item</p>
           <h2> Potluck's attendies</h2>
           <p>food item</p>
-          <h2> Potluck's attendies</h2>
-          <p>food item</p>
         </div>
 
         <div className='card-body3'>
@@ -28,7 +26,6 @@ const HomePageCard = () => {
         </div>
       </section>
 
-      
   );
 };
 
