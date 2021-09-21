@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import "./LogInPage.scss";
 // Custom components
-import AccountCard from "../../components/AccountCard/AccountCard.jsx"
+import AccountCard from "../../components/Cards/AccountCard/AccountCard.jsx"
 
 const LogInPage = () => {
   return (
