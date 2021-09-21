@@ -7,7 +7,7 @@ import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
 import HomePage from "./scenes/HomePage/HomePage.jsx";
 import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import CreatePage from "./scenes/CreatePage/CreatePage";
+import CreatePage from "./scenes/CreatePage/CreatePage.jsx";
 
 function App() {
   return (
