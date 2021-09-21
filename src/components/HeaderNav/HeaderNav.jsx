@@ -1,19 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./HeaderNav.scss";
 
-const HeaderNav = (props) => {
-  const { title } = props;
-
+const HeaderNav = () => {
   return (
     <header className="header-navbar">
       <div className="header-content">
         <div className="header-left">
-          <h2>{title}</h2>
+          <Link exact to="/"><h2>Potluck Planner</h2></Link>
         </div>
         <nav className="header-right">
-          <NavLink exact to="/" activeClassName="active-navlink">Home</NavLink>
+          <NavLink to="/potlucks/create" activeClassName="active-navlink">Create</NavLink>
           <NavLink to="/account" activeClassName="active-navlink">Log In</NavLink>
         </nav>
       </div>

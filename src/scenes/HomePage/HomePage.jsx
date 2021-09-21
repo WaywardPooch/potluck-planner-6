@@ -10,6 +10,9 @@ const HomePage = () => {
         title="Potluck Planner"
         description="The Ultimate Potluck Organizer"
         imageURL={heroHomeImg}
+        showButton={true}
+        buttonText="Start Now"
+        buttonURL="/potlucks/create"
       />
     </>
   );

@@ -10,8 +10,8 @@ $color-link-hover-bg: $color-link;
 
 header.header-navbar {
   background-color: $color-background;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-  padding: 2rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   position: sticky;
   top: 0;
 
@@ -22,9 +22,21 @@ header.header-navbar {
     margin: 0 auto;
     max-width: $max-width-desktop;
 
+    h2,
+    a {
+      border-radius: 7px;
+      color: $color-link;
+      padding: 1rem;
+      text-decoration: none;
+      transition: 200ms;
+
+      &:hover {
+        background-color: $color-link-hover-bg;
+        color: $color-link-hover-fg;
+      }
+    }
     div.header-left {
       h2 {
-        color: $color-title;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
@@ -32,21 +44,11 @@ header.header-navbar {
     }
     nav.header-right {
       a {
-        border-radius: 7px;
-        color: $color-link;
         font-size: 1.8rem;
         margin-left: 1rem;
-        padding: 1rem;
-        text-decoration: none;
-        transition: 200ms;
 
         &.active-navlink {
           color: $color-link-active;
-        }
-
-        &:hover {
-          background-color: $color-link-hover-bg;
-          color: $color-link-hover-fg;
         }
       }
     }

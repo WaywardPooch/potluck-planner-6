@@ -1,8 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HeroBanner.scss";
 
 const HeroBanner = (props) => {
-  const { title, description, imageURL } = props;
+  const { 
+    title, 
+    description, 
+    imageURL, 
+    showButton, 
+    buttonText, 
+    buttonURL 
+  } = props;
 
   return (
     <div
@@ -14,6 +22,8 @@ const HeroBanner = (props) => {
       <div className="hero-content">
         <h1>{title}</h1>
         <h2>{description}</h2>
+        {/* Only show button if showButton is true */}
+        {showButton && <Link to={buttonURL}>{buttonText}</Link>}
       </div>
     </div>
   );
