@@ -24,7 +24,7 @@ function App() {
           <LogInPage />
         </Route>
         <Route path={`/`}>
-          <HomePage />
+          <HomePage isLoggedIn={false}/>
         </Route>
       </Switch>
 
