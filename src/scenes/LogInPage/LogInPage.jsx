@@ -16,7 +16,7 @@ const LogInPage = () => {
         <div className="login-area">
           {/* Login Card Label Area */}
           <div className="login-area-top">
-            <h1>Log In</h1>
+            <h1>Account</h1>
           </div>
           {/* Login Card Content Area */}
           <div className="login-area-bottom">
