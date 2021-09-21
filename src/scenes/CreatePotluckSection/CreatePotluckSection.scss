@@ -1,8 +1,41 @@
 $max-width-desktop: 1000px;
+$width-card-desktop: 300px;
+
+$color-card-bg: white;
 
 section.create-potluck-section {
+  padding: 4rem;
+
   div.create-potluck-content {
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: $max-width-desktop;
+
+    div.potluck-items-provided,
+    div.potluck-ui,
+    div.potluck-items-requested {
+      background-color: $color-card-bg;
+      border-radius: 7px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      padding: 4rem;
+      width: $width-card-desktop;
+    }
+    div.potluck-items-provided,
+    div.potluck-items-requested {
+      li {
+        width: 100%;
+      }
+    }
+    div.potluck-ui {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      label {
+        margin: 1rem 0;
+      }
+    }
   }
 }
