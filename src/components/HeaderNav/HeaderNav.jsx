@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Switch, Route, Link, NavLink } from "react-router-dom";
 
 import "./HeaderNav.scss";
 
@@ -15,23 +15,29 @@ const HeaderNav = (props) => {
           </Link>
         </div>
         <nav className="header-right">
-          <button
-            className="dev-button"
-            onClick={() => setIsLoggedIn(!isLoggedIn)}
-          >
-            [DEV] Toggle LoggedIn
-          </button>
-          {!isLoggedIn ? (
-            // If the user is not logged in, show "Log In" entry in nav
-            <NavLink to="/account" activeClassName="active-navlink">
-              Log In
-            </NavLink>
-          ) : (
-            // Otherwise, show log out entry (PLACEHOLDER: WILL NEED TO BE CHANGED!!!)
-            <NavLink to="/account" activeClassName="active-navlink">
-              Log Out
-            </NavLink>
-          )}
+          {/* If on the login page, hide the nav from user */}
+          <Switch>
+            <Route path="/account" />
+            <Route path="/">
+              <button
+                className="dev-button"
+                onClick={() => setIsLoggedIn(!isLoggedIn)}
+              >
+                [DEV] Toggle LoggedIn
+              </button>
+              {!isLoggedIn ? (
+                // If the user is not logged in, show "Log In" entry in nav
+                <NavLink to="/account" activeClassName="active-navlink">
+                  Log In
+                </NavLink>
+              ) : (
+                // Otherwise, show log out entry (PLACEHOLDER: WILL NEED TO BE CHANGED!!!)
+                <NavLink to="/account" activeClassName="active-navlink">
+                  Log Out
+                </NavLink>
+              )}
+            </Route>
+          </Switch>
         </nav>
       </div>
     </header>
