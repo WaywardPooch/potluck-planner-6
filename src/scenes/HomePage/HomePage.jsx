@@ -8,6 +8,7 @@ const HomePage = () => {
   return (
     <>
       <HeroBanner
+        height={10}
         title="Potluck Planner"
         description="The Ultimate Potluck Organizer"
         imageURL={heroHomeImg}

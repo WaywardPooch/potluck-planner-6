@@ -23,7 +23,7 @@ function App() {
         <Route path={`/account`}>
           <LogInPage />
         </Route>
-        <Route exact path={`/`}>
+        <Route path={`/`}>
           <HomePage />
         </Route>
       </Switch>
