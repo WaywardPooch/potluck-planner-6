@@ -58,10 +58,6 @@ function CreatePotluckForm(props){
                 <Label>The item you are providing: <Input type='text' name='itemProvided' value={formData.itemProvided} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
-                <Label>Request an item: <Input type='text' name='itemRequested' value={formData.itemRequested} onChange={onChange}/></Label><Button onClick={addRequestedItem}>Add Item</Button><br/>
-                {formData.itemsRequested.map((item, index) => <><p>{item}</p><Button onClick={removeItem(index)}>Remove Item</Button>   </>)}
-            </FormGroup>
-            <FormGroup>
                 <Label>Date: <Input type='date' name='date' value={formData.date} onChange={onChange}/></Label>
             </FormGroup>
             <FormGroup>
@@ -69,6 +65,10 @@ function CreatePotluckForm(props){
             </FormGroup>
             <FormGroup>
                 <Label>Address: <Input type='text' name='address' value={formData.address} onChange={onChange}/></Label>
+            </FormGroup>
+            <FormGroup>
+                <Label>Request an item: <Input type='text' name='itemRequested' value={formData.itemRequested} onChange={onChange}/></Label><Button onClick={addRequestedItem}>Add Item</Button><br/>
+                {formData.itemsRequested.map((item, index) => <><p>{item}</p><Button onClick={removeItem(index)}>Remove Item</Button>   </>)}
             </FormGroup>
             <FormGroup>
                 <Input type='submit'/>
