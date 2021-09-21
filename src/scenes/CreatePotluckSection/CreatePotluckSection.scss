@@ -1,0 +1,8 @@
+$max-width-desktop: 1000px;
+
+section.create-potluck-section {
+  div.create-potluck-content {
+    margin: 0 auto;
+    max-width: $max-width-desktop;
+  }
+}

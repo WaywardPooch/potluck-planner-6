@@ -13,7 +13,7 @@ const HomePage = (props) => {
   return (
     <>
       {!isLoggedIn 
-      // When the user is bot logged in, show marketing stuff
+      // When the user is NOT logged in, show MARKETING
       ? (
         <section className="home-page">
           <HeroBanner
@@ -35,7 +35,7 @@ const HomePage = (props) => {
             textAlign="center"
           />
         </section>
-      // When the user IS logged in, show real UI
+      // When the user IS logged in, show REAL UI
       ) : (
         <CreatePotluckSection />
       )}
