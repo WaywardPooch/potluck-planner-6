@@ -23,7 +23,7 @@ const HomePage = (props) => {
             imageURL={heroHomeImg}
             showButton={true}
             buttonText="Start Now"
-            buttonURL="/potlucks/create"
+            buttonURL="/account"
           />
           <TextShowcase 
             title="Planning Made Easy" 
