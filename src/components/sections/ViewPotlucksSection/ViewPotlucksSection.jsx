@@ -16,6 +16,7 @@ const ViewPotlucks = () => {
           {potlucks.map((potluck)=>{
             return (
               <PotluckCard 
+                key={potluck.id}
                 name={potluck.potluck_name}
                 date={potluck.potluck_date}
                 time={potluck.potluck_time}

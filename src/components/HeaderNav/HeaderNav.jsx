@@ -16,7 +16,7 @@ const HeaderNav = (props) => {
     <header className="header-navbar">
       <div className="header-content">
         <div className="header-left">
-          <Link exact to="/">
+          <Link to="/">
             <h2>Potluck Planner</h2>
           </Link>
         </div>
@@ -37,7 +37,6 @@ const HeaderNav = (props) => {
                 // Otherwise, show log out entry (PLACEHOLDER: WILL NEED TO BE CHANGED!!!)
                 <Link
                   to="/"
-                  activeClassName="active-navlink"
                   onClick={toggleLogIn}
                 >
                   Log Out

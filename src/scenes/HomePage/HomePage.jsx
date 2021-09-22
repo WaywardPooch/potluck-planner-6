@@ -1,7 +1,5 @@
 // Libraries
 import React from "react";
-import { Link } from "react-router-dom";
-import { Jumbotron, Button } from "reactstrap";
 // Assets
 import heroHomeImg from "../../assets/img-hero-home-400kb.jpg";
 // Custom components

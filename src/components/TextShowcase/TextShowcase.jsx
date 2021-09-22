@@ -17,8 +17,8 @@ const TextShowcase = (props) => {
         <h3>{title}</h3>
 
         {/* Print each string from description in its own <p> element */}
-        {description.map((string) => {
-          return <p>{string}</p>;
+        {description.map((string, index) => {
+          return <p key={index}>{string}</p>;
         })}
       </div>
     </div>
