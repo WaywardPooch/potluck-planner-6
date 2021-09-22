@@ -1,5 +1,7 @@
 $max-width-desktop: 1000px;
-$width-card-desktop: 300px;
+$max-width-mobile: 768px;
+$width-card-desktop: 30rem;
+$width-card-mobile: 100%;
 
 $color-card-bg: white;
 $color-section-bg: #eee;
@@ -8,12 +10,20 @@ section.create-potluck-section {
   background-color: $color-section-bg;
   padding: 4rem;
 
+  @media(max-width: $max-width-mobile) {
+    padding: 2rem;
+  }
+
   div.create-potluck-content {
     display: flex;
     font-size: 1.8rem;
     justify-content: space-between;
     margin: 0 auto;
     max-width: $max-width-desktop;
+
+    @media(max-width: $max-width-mobile) {
+      flex-direction: column;
+    }
 
     div.potluck-items-provided,
     div.potluck-ui,
@@ -23,11 +33,21 @@ section.create-potluck-section {
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
       padding: 4rem;
       width: $width-card-desktop;
+
+      @media(max-width: $max-width-mobile) {
+        margin: 1rem auto;
+        padding: 2rem;
+        width: $width-card-mobile;
+      }
     }
     div.potluck-items-provided,
     div.potluck-items-requested {
       li {
         width: 100%;
+      }
+
+      @media(max-width: $max-width-mobile) {
+        order: 1;
       }
     }
     div.potluck-ui {
@@ -41,3 +61,24 @@ section.create-potluck-section {
     }
   }
 }
+
+// @media(max-width: 600px) {
+//   div.potluck-items-provided,
+//   div.potluck-ui,
+//   div.potluck-items-requested {
+//     width: $width-card-mobile;
+//   }
+//   div.create-potluck-content {
+//     align-items: center;
+//     flex-direction: column;
+//   }
+//   div.potluck-items-provided {
+//     order: 3;
+//   }
+//   div.potluck-items-requested {
+//     order: 2;
+//   }
+//   div.potluck-ui {
+//     order: 1;
+//   }
+// }
