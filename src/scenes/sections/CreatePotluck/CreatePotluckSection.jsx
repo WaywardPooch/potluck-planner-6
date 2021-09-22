@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import "./CreatePotluckSection.scss";
 // Custom components
-import CreatePotluckForm from "../../components/CreatePotluckForm.js";
+import CreatePotluckForm from "../../../components/forms/CreatePotluckForm.js";
 
 const CreatePotluckSection = () => {
   return (

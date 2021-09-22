@@ -1,6 +1,6 @@
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import { useState } from 'react';
-import schema from '../Schemas/createPotluckFormSchema';
+import schema from '../../schemas/createPotluckFormSchema';
 import * as yup from 'yup';
 
 const initialFormData = {

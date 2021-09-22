@@ -5,7 +5,7 @@ import "./ViewPotlucksSection.scss"
 // Data (Placeholder for now)
 import potlucks from "../../../dummydata/potlucks.json";
 // Custom components
-import PotluckCard from "../../Cards/PotluckCard/PotluckCard.jsx"
+import PotluckCard from "../../../components/cards/PotluckCard/PotluckCard.jsx"
 
 const ViewPotlucks = () => {
   return (

@@ -1,12 +1,12 @@
 // Libraries
 import React from "react";
 // Assets
-import heroHomeImg from "../../assets/img-hero-home-400kb.jpg";
+import heroHomeImg from "../../../assets/img-hero-home-400kb.jpg";
 // Custom components
-import HeroBanner from "../../components/HeroBanner/HeroBanner.jsx";
-import TextShowcase from "../../components/TextShowcase/TextShowcase.jsx";
-import CreatePotluckSection from "../CreatePotluckSection/CreatePotluckSection.jsx";
-import ViewPotlucksSection from "../../components/sections/ViewPotlucksSection/ViewPotlucksSection.jsx";
+import HeroBanner from "../../../components/banners/HeroBanner/HeroBanner.jsx";
+import TextShowcase from "../../../components/banners/TextShowcase/TextShowcase.jsx";
+import CreatePotluckSection from "../../sections/CreatePotluck/CreatePotluckSection.jsx";
+import ViewPotlucksSection from "../../sections/ViewPotlucks/ViewPotlucksSection.jsx";
 
 const HomePage = (props) => {
   const { isLoggedIn } = props;

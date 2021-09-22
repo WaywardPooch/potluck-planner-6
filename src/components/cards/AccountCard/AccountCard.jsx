@@ -4,8 +4,8 @@ import { NavLink, Switch, Route } from "react-router-dom";
 // Styles
 import "./AccountCard.scss";
 // Custom components
-import SignUpForm from "../../SignUpForm.js"
-import LogInForm from "../../LogInForm.js"
+import SignUpForm from "../../forms/SignUpForm.js"
+import LogInForm from "../../forms/LogInForm.js"
 
 const AccountCard = () => {
   return (

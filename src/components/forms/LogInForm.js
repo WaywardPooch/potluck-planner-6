@@ -82,10 +82,10 @@
 
 import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { useState } from 'react';
-import schema from '../Schemas/logInFormSchema';
+import schema from '../../schemas/logInFormSchema';
 import * as yup from 'yup';
 
-import usersDummyData from '../dummydata/users.json'; //TEMP CODE, PLEASE DELETE
+import usersDummyData from '../../dummydata/users.json'; //TEMP CODE, PLEASE DELETE
 
 const initialFormData = {
     email: '',

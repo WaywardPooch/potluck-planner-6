@@ -4,10 +4,10 @@ import { Route, Switch } from "react-router-dom";
 // Styles
 import "./App.scss";
 // Custom components
-import HeaderNav from "./components/HeaderNav/HeaderNav.jsx";
-import HomePage from "./scenes/HomePage/HomePage.jsx";
-import LogInPage from "./scenes/LogInPage/LogInPage.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import HeaderNav from "./scenes/sections/HeaderNav/HeaderNav.jsx";
+import HomePage from "./scenes/pages/HomePage/HomePage.jsx";
+import LogInPage from "./scenes/pages/LogInPage/LogInPage.jsx";
+import Footer from "./scenes/sections/Footer/Footer.jsx";
 
 function App() {
   // This is a PLACEHOLDER variable for testing login/logout states

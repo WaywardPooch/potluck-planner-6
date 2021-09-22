@@ -1,9 +1,9 @@
 import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { useState } from 'react';
-import schema from '../Schemas/SignUpFormSchema';
+import schema from '../../schemas/SignUpFormSchema';
 import * as yup from 'yup';
 
-import usersDummyData from '../dummydata/users.json'; //TEMP CODE, PLEASE DELETE
+import usersDummyData from '../../dummydata/users.json'; //TEMP CODE, PLEASE DELETE
 
 const initialFormData = {
     name: '',
