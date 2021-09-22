@@ -1,23 +1,32 @@
 // Libraries
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 // Styles
-import "./App.scss";
+import "./styles/fonts.css";
+import "./styles/general.css";
 // Custom components
 import HeaderNav from "./scenes/sections/HeaderNav/HeaderNav.jsx";
 import HomePage from "./scenes/pages/HomePage/HomePage.jsx";
 import LogInPage from "./scenes/pages/LogInPage/LogInPage.jsx";
 import Footer from "./scenes/sections/Footer/Footer.jsx";
 
+// Styled components
+const StyledApp = styled.div`
+  background-color: #2f2f2f;
+  min-height: 100vh;
+`;
+
+// Main component
 function App() {
   // This is a PLACEHOLDER variable for testing login/logout states
   // Please hook this up to the real logged in state when ready!
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="App">
+    <StyledApp>
       {/* Display HeaderBar on all pages */}
-      <HeaderNav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+      <HeaderNav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       {/* Show page scene under header depending on Route */}
       <Switch>
@@ -25,13 +34,13 @@ function App() {
           <LogInPage />
         </Route>
         <Route path={`/`}>
-          <HomePage isLoggedIn={isLoggedIn}/>
+          <HomePage isLoggedIn={isLoggedIn} />
         </Route>
       </Switch>
 
       {/* Display Footer on all pages */}
       <Footer />
-    </div>
+    </StyledApp>
   );
 }
 
