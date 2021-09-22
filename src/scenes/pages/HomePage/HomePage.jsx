@@ -3,7 +3,7 @@ import React from "react";
 // Assets
 import heroHomeImg from "../../../assets/img-hero-home-400kb.jpg";
 // Custom components
-import HeroBanner from "../../../components/banners/HeroBanner/HeroBanner.jsx";
+import Jumbotron from "../../../components/banners/Jumbotron";
 import TextShowcase from "../../../components/banners/TextShowcase/TextShowcase.jsx";
 import CreatePotluckSection from "../../sections/CreatePotluck/CreatePotluckSection.jsx";
 import ViewPotlucksSection from "../../sections/ViewPotlucks/ViewPotlucksSection.jsx";
@@ -16,7 +16,7 @@ const HomePage = (props) => {
       {!isLoggedIn ? (
         // When the user is NOT logged in, show MARKETING
         <section className="home-page">
-          <HeroBanner
+          <Jumbotron
             height={50}
             title="Potluck Planner"
             description="The Ultimate Potluck Organizer"
