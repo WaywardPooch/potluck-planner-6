@@ -16,7 +16,6 @@ const LogInPage = () => {
         <Card
           title="Account"
           width="35rem"
-          imageURL={null}
           content={
             <>
               <div className="login-links">

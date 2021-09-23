@@ -105,7 +105,7 @@ const StyledCard = styled.div`
 
 // Main component
 const Card = (props) => {
-  const { imageURL, title, content, width } = props;
+  const { imageURL, imageAlt, title, content, width } = props;
 
   return (
     <StyledCard
@@ -115,7 +115,7 @@ const Card = (props) => {
     >
       <div className="card-head">
         {/* If there IS an image, show it */}
-        {imageURL && <img src={imageURL} />}
+        {imageURL && <img src={imageURL} alt={imageAlt} />}
         <h2>{title}</h2>
       </div>
       <div className="card-body">{content}</div>
