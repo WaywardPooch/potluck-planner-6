@@ -1,16 +1,33 @@
 // Libraries
 import React from "react";
 import { Switch, Route, NavLink } from "react-router-dom";
-// Styles
-import "./LogInPage.scss";
+import styled from "styled-components";
 // Custom components
 import Card from "../../../components/elements/Card";
 import LogInForm from "../../../components/forms/LogInForm";
 import SignUpForm from "../../../components/forms/SignUpForm";
+// Assets
+import loginBG from "../../../assets/img-bg-login-400kb.jpg";
+
+// Styled components
+const LogInPageContainer = styled.section`
+  background-image: url(${loginBG});
+  background-size: cover;
+
+  div.login-page-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 80vh;
+    max-width: ${props => props.theme.size.widthDesktop};
+    padding: 2rem;
+  }
+`;
 
 const LogInPage = () => {
   return (
-    <section className="login-page">
+    <LogInPageContainer>
       {/* Desktop Size Limit Container */}
       <div className="login-page-content">
         <Card
@@ -38,7 +55,7 @@ const LogInPage = () => {
           }
         />
       </div>
-    </section>
+    </LogInPageContainer>
   );
 };
 

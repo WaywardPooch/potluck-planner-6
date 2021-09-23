@@ -7,8 +7,8 @@ import "./styles/fonts.css";
 import "./styles/general.css";
 // Custom components
 import HeaderNav from "./scenes/sections/HeaderNav/HeaderNav.jsx";
-import HomePage from "./scenes/pages/HomePage/HomePage.jsx";
-import LogInPage from "./scenes/pages/LogInPage/LogInPage.jsx";
+import HomePage from "./scenes/pages/HomePage";
+import LogInPage from "./scenes/pages/LogInPage";
 import Footer from "./scenes/sections/Footer/Footer.jsx";
 
 // Styled components
