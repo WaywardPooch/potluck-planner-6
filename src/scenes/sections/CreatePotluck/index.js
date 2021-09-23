@@ -15,6 +15,7 @@ const StyledCreatePotluckSection = styled.section`
   }
 `;
 
+// Main component
 const CreatePotluckSection = () => {
   return (
     <StyledCreatePotluckSection>

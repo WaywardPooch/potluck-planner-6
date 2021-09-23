@@ -25,6 +25,7 @@ const LogInPageContainer = styled.section`
   }
 `;
 
+// Main component
 const LogInPage = () => {
   return (
     <LogInPageContainer>

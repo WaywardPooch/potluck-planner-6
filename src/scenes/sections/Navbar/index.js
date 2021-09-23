@@ -5,6 +5,7 @@ import styled from "styled-components";
 // Custom components
 import Button from "../../../components/elements/Button";
 
+// Styled components
 const StyledNavbar = styled.header`
   background-color: ${(props) => props.theme.color.blackSoft};
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -35,14 +36,17 @@ const StyledNavbar = styled.header`
   }
 `;
 
+// Main component
 const HeaderNav = (props) => {
+  // ========== STATES
   const { isLoggedIn, setIsLoggedIn } = props;
 
-  // Helper function for toggling log in state
+  // ========== HELPERS
   const toggleLogIn = () => {
     setIsLoggedIn(!isLoggedIn);
   };
 
+  // ========== MARKUP
   return (
     <StyledNavbar>
       <div className="header-content">

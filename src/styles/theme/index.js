@@ -9,7 +9,7 @@ const theme = {
     accent: "#ff7f50",
   },
   size: {
-    widthDesktop: "1000px",
+    widthDesktop: "1200px",
     widthMobile: "500px"
   }
 }

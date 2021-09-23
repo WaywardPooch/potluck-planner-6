@@ -15,6 +15,7 @@ h2 {
 }
 a, p, button {
   font-size: 2rem;
+  color: #2f2f2f;
 }
 a, button {
   cursor: pointer;

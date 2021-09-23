@@ -4,10 +4,11 @@ import React from "react";
 import heroHomeImg from "../../../assets/img-hero-home-400kb.jpg";
 // Custom components
 import Jumbotron from "../../../components/banners/Jumbotron";
-import TextShowcase from "../../../components/banners/TextShowcase/TextShowcase.jsx";
-import CreatePotluckSection from "../../sections/CreatePotluck";
-import ViewPotlucksSection from "../../sections/ViewPotlucks/ViewPotlucksSection.jsx";
+import TextShowcase from "../../../components/banners/TextShowcase";
+import CreatePotluck from "../../sections/CreatePotluck";
+import ViewPotlucks from "../../sections/ViewPotlucks";
 
+// Main component
 const HomePage = (props) => {
   const { isLoggedIn } = props;
 
@@ -27,19 +28,28 @@ const HomePage = (props) => {
           />
           <TextShowcase
             title="Planning Made Easy"
-            description={[
-              "If you have ever tried to organize a potluck through text messages, online to-do lists or spreadsheets, you'll understand why this app is essential.",
-              "In the world of social gatherings and potlucks the 'Potluck Planner' is king.",
-              "This is your place for all things pot luck.",
-            ]}
+            content={
+              <>
+                <p>
+                  If you have ever tried to organize a potluck through text
+                  messages, online to-do lists or spreadsheets, you'll
+                  understand why this app is essential.
+                </p>
+                <p>
+                  In the world of social gatherings and potlucks the 'Potluck
+                  Planner' is king.
+                </p>
+                <p>This is your place for all things pot luck.</p>
+              </>
+            }
             textAlign="center"
           />
         </section>
       ) : (
         // When the user IS logged in, show REAL UI
         <>
-          <CreatePotluckSection />
-          <ViewPotlucksSection />
+          <CreatePotluck />
+          <ViewPotlucks />
         </>
       )}
     </>

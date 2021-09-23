@@ -9,8 +9,8 @@ import "./styles/general.css";
 import HeaderNav from "./scenes/sections/Navbar";
 import HomePage from "./scenes/pages/HomePage";
 import LogInPage from "./scenes/pages/LogInPage";
-import InvitePage from "./scenes/pages/InvitePage";
-import Footer from "./scenes/sections/Footer/Footer.jsx";
+import PotluckPage from "./scenes/pages/PotluckPage";
+import Footer from "./scenes/sections/Footer";
 
 // Styled components
 const StyledApp = styled.div`
@@ -32,7 +32,7 @@ function App() {
       {/* Show page scene under header depending on Route */}
       <Switch>
         <Route path={`/potluck/:id`}>
-          <InvitePage />
+          <PotluckPage />
         </Route>
         <Route path={`/account`}>
           <LogInPage />
