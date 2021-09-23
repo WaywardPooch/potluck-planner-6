@@ -18,7 +18,7 @@ const StyledNavbar = styled.header`
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: $max-width-desktop;
+    max-width: ${props => props.theme.size.widthDesktop};
 
     div.header-left {
       font-size: 2rem;
@@ -32,6 +32,12 @@ const StyledNavbar = styled.header`
       * {
         margin-left: 0.5rem;
       }
+    }
+  }
+
+  @media(max-width: ${props => props.theme.size.widthMobile}) {
+    .devbutton {
+      display: none;
     }
   }
 `;
@@ -60,7 +66,7 @@ const HeaderNav = (props) => {
           <Switch>
             <Route path="/account" />
             <Route path="/">
-              <div onClick={toggleLogIn}>
+              <div className="devbutton" onClick={toggleLogIn}>
                 <Button theme="HollowLight" text="[DEV] Toggle LogIn" />
               </div>
               {!isLoggedIn ? (

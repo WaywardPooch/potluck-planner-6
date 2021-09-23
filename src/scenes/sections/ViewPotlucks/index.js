@@ -30,6 +30,7 @@ const PotluckGallery = styled.section`
   }
 `;
 
+// Main component
 const ViewPotlucks = () => {
   return (
     <PotluckGallery>
@@ -41,7 +42,7 @@ const ViewPotlucks = () => {
               <Link to={`/potluck/${potluck.id}`} key={potluck.id}>
                 <Card
                   title={potluck.potluck_name}
-                  width="30rem"
+                  width="32rem"
                   content={
                     <>
                       <p>Date: {potluck.potluck_date}</p>
