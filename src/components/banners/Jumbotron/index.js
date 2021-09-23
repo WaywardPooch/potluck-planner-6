@@ -7,7 +7,7 @@
   with a black overlay on top for text readability, as well as a button, too.
 
   PROPERTIES:
-    height (integer): a REM value for total height
+    height (string): a string value for total height (any unit you want)
     title (string): words to display as the primary text heading
     description (string): one-line catch phrase, dimmed and under the title
     imageURL (string): the URL for the picture to display underneath
@@ -67,7 +67,7 @@ const Jumbotron = (props) => {
     <StyledJumbotron
       style={{
         backgroundImage: `url(${imageURL})`,
-        height: `${height}rem`,
+        height: `${height}`,
       }}
     >
       <div className="jumbotron-body">

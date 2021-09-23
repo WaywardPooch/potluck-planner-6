@@ -17,7 +17,7 @@ const HomePage = (props) => {
         // When the user is NOT logged in, show MARKETING
         <section className="home-page">
           <Jumbotron
-            height={50}
+            height="50rem"
             title="Potluck Planner"
             description="The Ultimate Potluck Organizer"
             imageURL={heroHomeImg}
