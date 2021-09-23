@@ -142,7 +142,7 @@ function CreatePotluckForm(props) {
           onChange={onChange}
         />
         <div onClick={addRequestedItem}>
-          <Button theme="FullDark" text="Add Item" />
+          <Button theme="FullDark" text="Add" />
         </div>
       </label>
 
@@ -152,7 +152,7 @@ function CreatePotluckForm(props) {
           <div key={index} className="list-item">
             <p>{item}</p>
             <div onClick={removeItem(index)}>
-              <Button theme="FullDark" text="Remove Item" />
+              <Button theme="FullDark" text="Remove" />
             </div>
           </div>
         ))}

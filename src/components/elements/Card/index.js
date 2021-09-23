@@ -70,7 +70,7 @@ const StyledCard = styled.div`
           &[type=date] {
             font-size: 1.8rem;
             margin: 0 1rem;
-
+            width: 100%;
             &:focus {
               box-shadow: 0 0 4px 0 ${props => props.theme.color.accent}99;
             }
