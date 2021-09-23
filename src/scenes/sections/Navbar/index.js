@@ -61,7 +61,7 @@ const HeaderNav = (props) => {
               </div>
               {!isLoggedIn ? (
                 // If the user is not logged in, show "Log In" entry in nav
-                <Link to="/account" activeClassName="active-navlink">
+                <Link to="/account">
                   <Button theme="FullDark" text="Log In" />
                 </Link>
               ) : (
