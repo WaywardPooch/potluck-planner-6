@@ -76,7 +76,7 @@ const Jumbotron = (props) => {
         {/* Only show button if showButton is true */}
         {showButton && (
           <Link to={buttonURL}>
-            <Button style="FullColored" text={buttonText} />
+            <Button theme="FullColored" text={buttonText} />
           </Link>
         )}
       </div>

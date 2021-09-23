@@ -9,7 +9,7 @@
   NOTES: If adding onClick/onSubmit, wrap this button inside another element
 
   PROPERTIES:
-    style (string): must be one of the following... 
+    theme (string): must be one of the following... 
       - FullLight     - FullDark    - FullColored
       - HollowLight   - HollowDark  - HollowColored
 
@@ -32,14 +32,14 @@ const ButtonFullLight = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.color.blackSoft};
-    color: ${(props) => props.theme.color.whiteSoft};
+    color: ${(props) => props.theme.color.white};
   }
 `;
 const ButtonFullDark = styled.button`
   background-color: ${(props) => props.theme.color.blackSoft};
   border: none;
   border-radius: 7px;
-  color: ${(props) => props.theme.color.whiteSoft};
+  color: ${(props) => props.theme.color.white};
   padding: 1rem 3rem;
   transition: 200ms;
 
@@ -52,7 +52,7 @@ const ButtonFullColored = styled.button`
   background-color: ${(props) => props.theme.color.accent};
   border: none;
   border-radius: 7px;
-  color: ${(props) => props.theme.color.whiteSoft};
+  color: ${(props) => props.theme.color.white};
   padding: 1rem 3rem;
   transition: 200ms;
 
@@ -63,9 +63,9 @@ const ButtonFullColored = styled.button`
 `;
 const ButtonHollowLight = styled.button`
   background: none;
-  border: 1px solid ${(props) => props.theme.color.whiteSoft};
+  border: 1px solid ${(props) => props.theme.color.white};
   border-radius: 7px;
-  color: ${(props) => props.theme.color.whiteSoft};
+  color: ${(props) => props.theme.color.white};
   padding: 1rem 3rem;
   transition: 200ms;
 
@@ -84,7 +84,7 @@ const ButtonHollowDark = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.color.blackSoft};
-    color: ${(props) => props.theme.color.whiteSoft};
+    color: ${(props) => props.theme.color.white};
   }
 `;
 const ButtonHollowColored = styled.button`
@@ -97,28 +97,28 @@ const ButtonHollowColored = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.color.accent};
-    color: ${(props) => props.theme.color.whiteSoft};
+    color: ${(props) => props.theme.color.white};
   }
 `;
 
 // Main component
 const Button = (props) => {
-  const { style, text } = props;
+  const { theme, text } = props;
 
   return (
     <>
-      {/* Return desired button style */}
-      {style === "FullLight" ? (
+      {/* Return desired button theme */}
+      {theme === "FullLight" ? (
         <ButtonFullLight>{text}</ButtonFullLight>
-      ) : style === "FullDark" ? (
+      ) : theme === "FullDark" ? (
         <ButtonFullDark>{text}</ButtonFullDark>
-      ) : style === "FullColored" ? (
+      ) : theme === "FullColored" ? (
         <ButtonFullColored>{text}</ButtonFullColored>
-      ) : style === "HollowLight" ? (
+      ) : theme === "HollowLight" ? (
         <ButtonHollowLight>{text}</ButtonHollowLight>
-      ) : style === "HollowDark" ? (
+      ) : theme === "HollowDark" ? (
         <ButtonHollowDark>{text}</ButtonHollowDark>
-      ) : style === "HollowColored" ? (
+      ) : theme === "HollowColored" ? (
         <ButtonHollowColored>{text}</ButtonHollowColored>
       ) : (
         console.log("ERROR! INVALID BUTTON TYPE PROVIDED!")

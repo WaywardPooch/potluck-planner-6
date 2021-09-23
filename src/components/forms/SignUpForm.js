@@ -4,6 +4,8 @@ import * as yup from "yup";
 // Data
 import schema from "../../schemas/SignUpFormSchema";
 import usersDummyData from "../../dummydata/users.json"; //TEMP CODE, PLEASE DELETE
+// Custom components
+import Button from "../elements/Button";
 
 // Variables
 const initialFormData = {
@@ -86,7 +88,10 @@ function SignUpForm() {
           onChange={onChange}
         />
       </label>
-      <input type="submit" />
+
+      <Button text="Log In" theme="FullColored">
+        <input type="submit" />
+      </Button>
     </form>
   );
 }
