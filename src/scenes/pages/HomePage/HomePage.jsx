@@ -5,7 +5,7 @@ import heroHomeImg from "../../../assets/img-hero-home-400kb.jpg";
 // Custom components
 import Jumbotron from "../../../components/banners/Jumbotron";
 import TextShowcase from "../../../components/banners/TextShowcase/TextShowcase.jsx";
-import CreatePotluckSection from "../../sections/CreatePotluck/CreatePotluckSection.jsx";
+import CreatePotluckSection from "../../sections/CreatePotluck";
 import ViewPotlucksSection from "../../sections/ViewPotlucks/ViewPotlucksSection.jsx";
 
 const HomePage = (props) => {

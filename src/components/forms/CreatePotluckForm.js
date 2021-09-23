@@ -1,8 +1,11 @@
 // Libraries
 import { useState } from "react";
 import * as yup from "yup";
+import styled from "styled-components";
 // Data
 import schema from "../../schemas/createPotluckFormSchema";
+// Custom components
+import Button from "../../components/elements/Button";
 
 // Variables
 const initialFormData = {
@@ -22,6 +25,21 @@ const initialFormErrors = {
   date: "A date is required",
   address: "An address is required",
 };
+
+// Styled components
+const ItemList = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  div.list-item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+`;
 
 // Main component
 function CreatePotluckForm(props) {
@@ -123,16 +141,25 @@ function CreatePotluckForm(props) {
           value={formData.itemRequested}
           onChange={onChange}
         />
+        <div onClick={addRequestedItem}>
+          <Button theme="FullDark" text="Add Item" />
+        </div>
       </label>
-      <button onClick={addRequestedItem}>Add Item</button>
+
       <br />
-      {formData.itemsRequested.map((item, index) => (
-        <>
-          <p>{item}</p>
-          <button onClick={removeItem(index)}>Remove Item</button>
-        </>
-      ))}
-      <input type="submit" />
+      <ItemList>
+        {formData.itemsRequested.map((item, index) => (
+          <div key={index} className="list-item">
+            <p>{item}</p>
+            <div onClick={removeItem(index)}>
+              <Button theme="FullDark" text="Remove Item" />
+            </div>
+          </div>
+        ))}
+      </ItemList>
+      <Button theme="FullColored" text="Create Potluck">
+        <input type="submit" />
+      </Button>
     </form>
   );
 }

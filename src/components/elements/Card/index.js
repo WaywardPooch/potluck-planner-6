@@ -58,7 +58,7 @@ const StyledCard = styled.div`
       label {
         align-items: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         font-size: 1.8rem;
         justify-content: space-between;
         margin-bottom: 1rem;
@@ -66,8 +66,10 @@ const StyledCard = styled.div`
         input {
           &[type=email],
           &[type=password],
-          &[type=text] {
+          &[type=text],
+          &[type=date] {
             font-size: 1.8rem;
+            margin: 0 1rem;
 
             &:focus {
               box-shadow: 0 0 4px 0 ${props => props.theme.color.accent}99;
